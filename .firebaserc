@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "examenp-e4236": {
+      "hosting": {
+        "ExamenPractico": [
+          "examenp-e4236"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "examenp-e4236"
+  }
+}
