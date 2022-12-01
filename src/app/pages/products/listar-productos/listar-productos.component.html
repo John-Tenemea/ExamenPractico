@@ -3,12 +3,12 @@
 
     
     <label for ="txtName">Nombre</label>
-    <input id="txtName" name ="txtName"[(ngModel)]="lstProducts.name"/><br/>
+    <input id="txtName" name ="txtName"[(ngModel)]="products.name"/><br/>
     <label for ="txtPrice">Precio</label>
-    <input id="txtPrice" name ="txtPrice"[(ngModel)]="lstProducts.price"/><br/>
+    <input id="txtPrice" name ="txtPrice"[(ngModel)]="products.price"/><br/>
     <label for ="txtCategori">Categoria</label>
-    <input id="txtCategoria" name ="txtCategoria" [(ngModel)]="lstProducts.categoria"/><br/>
+    <input id="txtCategoria" name ="txtCategoria" [(ngModel)]="products.categoria"/><br/>
     <label for ="txtStock">Stock</label>
-    <input id="txtStock" name ="txtStock" [(ngModel)]="lstProducts.Stock"/><br/>
+    <input id="txtStock" name ="txtStock" [(ngModel)]="products.Stock"/><br/>
 </form>
 <button (click)="goListProducts()">Listado de productos</button>

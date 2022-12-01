@@ -12,6 +12,7 @@ import { __param } from 'tslib';
 export class ListarProductosComponent implements OnInit {
   title= "Listar Productos"
   lstProducts=new Array()
+  products: any
 
   constructor(private router: Router,
     private productService: ProductsService) { }
@@ -21,7 +22,7 @@ export class ListarProductosComponent implements OnInit {
   }
 
   loadProducts(){
-    this.lstProducts=this.productService.getProducts()
+    this.products=this.productService.getProductsFire()
     console.log(this.lstProducts)
   }
   goListProducts(){

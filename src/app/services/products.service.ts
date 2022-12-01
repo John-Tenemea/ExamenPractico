@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../domain/products';
-
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore'
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
   lstProduts=new Array()
+  products: any
+  private productsCollection: AngularFirestoreCollection<Product>;
 
-  constructor() { }
-
-  addProduct(product: Product){
-    this.lstProduts.push(product);
-
+  constructor(private afs: AngularFirestore) { 
+    this.productsCollection = afs.collection<Product>('productos');
   }
-  getProducts(){
-    return this.lstProduts;
+  getProductsFire(){
+    return this.productsCollection.valueChanges();
   }
 }
