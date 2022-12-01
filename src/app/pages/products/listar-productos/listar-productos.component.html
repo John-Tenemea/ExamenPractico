@@ -1,14 +1,16 @@
 <h1>{{title}}</h1>
-<form>
-
-    
-    <label for ="txtName">Nombre</label>
-    <input id="txtName" name ="txtName"[(ngModel)]="products.name"/><br/>
-    <label for ="txtPrice">Precio</label>
-    <input id="txtPrice" name ="txtPrice"[(ngModel)]="products.price"/><br/>
-    <label for ="txtCategori">Categoria</label>
-    <input id="txtCategoria" name ="txtCategoria" [(ngModel)]="products.categoria"/><br/>
-    <label for ="txtStock">Stock</label>
-    <input id="txtStock" name ="txtStock" [(ngModel)]="products.Stock"/><br/>
-</form>
-<button (click)="goListProducts()">Listado de productos</button>
+<table>
+    <tr>
+        <th>Categoria</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        
+    </tr>
+    <tr *ngFor="let p of products | async">
+        <td>{{p.categoria}}</td>
+        <td>{{p.nombre}}</td>
+        <td>{{p.precio}}</td>
+        <td>{{p.stock}}</td>
+    </tr>
+</table>
